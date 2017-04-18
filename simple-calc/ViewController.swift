@@ -11,14 +11,12 @@ import UIKit
 class ViewController: UIViewController {
     
     var userInput : String = ""
-    var currentValue = 0
+    var currentValue = 0.0
     var currentOperation : Operator?
-    var avgCount = 1
-    var countCount = 1
+    var avgCount = 1.0
+    var countCount = 1.0
     var RPNMode = false
-    var previsNum = false;
-    var averageTotal = 0;
-    var finalAverage = false;
+    var averageTotal = 0.0
     var averageStarted = false;
     
     @IBOutlet weak var UserInputeTextField: UITextField!
@@ -49,7 +47,6 @@ class ViewController: UIViewController {
         let buttonText = sender.titleLabel!.text!
         switch buttonText {
             case "=":
-                finalAverage = true;
                 equalsCalculate(sender)
                 currentOperation = nil
                 avgCount = 1
@@ -79,7 +76,7 @@ class ViewController: UIViewController {
         
         for index in 0...userInputArray.count-1 {
             let currentComponent = userInputArray[index]
-            let numCheck = Int(currentComponent)
+            let numCheck = Double(currentComponent)
             if numCheck == nil{
                 switch currentComponent {
                     case "+":
@@ -112,7 +109,7 @@ class ViewController: UIViewController {
                 }
             } else {
                 if currentOperation == nil {
-                    currentValue = Int(currentComponent)!
+                    currentValue = Double(currentComponent)!
                 } else {
                     if currentOperation != Operator.average{
                         if averageStarted {
@@ -122,24 +119,24 @@ class ViewController: UIViewController {
                     }
                     switch currentOperation! {
                         case Operator.plus:
-                            currentValue += Int(currentComponent)!
+                            currentValue += Double(currentComponent)!
                         case Operator.sub:
                         
-                            currentValue -= Int(currentComponent)!
+                            currentValue -= Double(currentComponent)!
                         case Operator.mult:
                             
-                            currentValue *= Int(currentComponent)!
+                            currentValue *= Double(currentComponent)!
                         case Operator.div:
                             
-                            currentValue /= Int(currentComponent)!
+                            currentValue /= Double(currentComponent)!
                         case Operator.count:
                             
-                            countCount += 1
+                            countCount += 1.0
                             currentValue = countCount
                         case Operator.average:
                             averageStarted = true
-                            averageTotal += Int(currentComponent)!
-                            avgCount += 1
+                            averageTotal += Double(currentComponent)!
+                            avgCount += 1.0
                         case Operator.fact:
                             break;
                     }
@@ -186,10 +183,10 @@ class ViewController: UIViewController {
     }
     func factOperation(){
         var product = 1
-        for index in 1...currentValue {
+        for index in 1...Int(currentValue) {
             product *= index
         }
-        currentValue = product;
+        currentValue = Double(product);
     }
 
 }
