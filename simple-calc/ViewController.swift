@@ -61,7 +61,9 @@ class ViewController: UIViewController {
                 avgCount = 1
                 countCount = 1
                 userInput = ""
-            case "+", "-", "/", "*", "average", "count", "fact":
+            case  "fact":
+                userInput = userInput + " " + buttonText + " "
+            case "+", "-", "/", "*", "average", "count":
                 userInput = userInput + " " + buttonText + " "
                 disableButtons()
             default:
@@ -89,55 +91,66 @@ class ViewController: UIViewController {
                     case "*":
                         currentOperation = Operator.mult
                     case "average":
+                        if !averageStarted{
+                            averageTotal = currentValue
+                            averageStarted = true
+                        }
                         currentOperation = Operator.average
                     case "count":
                         currentOperation = Operator.count
+                        currentValue = countCount
                     case "fact":
                         currentOperation = Operator.fact
-                    default :
+                        factOperation()
+                    case "":
+                        if averageStarted {
+                            averageStarted = false
+                            currentValue = averageTotal / avgCount
+                        }
+                    default:
                         break
                 }
             } else {
                 if currentOperation == nil {
                     currentValue = Int(currentComponent)!
                 } else {
-                    if currentOperation != Operator.average && averageStarted{
-                        if (finalAverage){
-                            currentValue += averageTotal / avgCount
-                            finalAverage = false
+                    if currentOperation != Operator.average{
+                        if averageStarted {
                             averageStarted = false
+                            currentValue = averageTotal / avgCount
                         }
                     }
                     switch currentOperation! {
                         case Operator.plus:
-                            finalAverage = true
                             currentValue += Int(currentComponent)!
                         case Operator.sub:
-                            finalAverage = true
+                        
                             currentValue -= Int(currentComponent)!
                         case Operator.mult:
-                            finalAverage = true
+                            
                             currentValue *= Int(currentComponent)!
                         case Operator.div:
-                            finalAverage = true
+                            
                             currentValue /= Int(currentComponent)!
                         case Operator.count:
-                            finalAverage = true
+                            
                             countCount += 1
                             currentValue = countCount
                         case Operator.average:
                             averageStarted = true
-                            finalAverage = false
                             averageTotal += Int(currentComponent)!
                             avgCount += 1
                         case Operator.fact:
-                            finalAverage = true
-                            factOperation()
+                            break;
                     }
                     
                 }
             }
             
+        }
+        if averageStarted {
+            averageStarted = false
+            currentValue = averageTotal / avgCount
         }
         
         ResultTextField.text = String(currentValue)
@@ -150,6 +163,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var subbutton: UIButton!
     @IBOutlet weak var multbutton: UIButton!
     @IBOutlet weak var divbutton: UIButton!
+    
     
     func disableButtons(){
         averagebutton.isEnabled=false
