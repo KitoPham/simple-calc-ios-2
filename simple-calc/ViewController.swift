@@ -53,17 +53,22 @@ class ViewController: UIViewController {
                 countCount = 1
                 averageTotal = 0
                 userInput = String(currentValue)
-                enableButtons()
+                enableButtons()     
+            case ".":
+                disableDecimal()
+                userInput += buttonText
             case "C":
                 currentOperation = nil
                 avgCount = 1
                 countCount = 1
                 userInput = ""
                 ResultTextField.text = ""
+                enableDecimal();
             case  "fact":
                 userInput = userInput + " " + buttonText + " "
             case "+", "-", "/", "*", "average", "count":
                 userInput = userInput + " " + buttonText + " "
+                enableDecimal();
                 disableButtons()
             default:
                 userInput += buttonText
@@ -189,6 +194,14 @@ class ViewController: UIViewController {
             product *= index
         }
         currentValue = Double(product);
+    }
+    @IBOutlet weak var decimalButton: UIButton!
+    
+    func enableDecimal(){
+        decimalButton.isEnabled = true
+    }
+    func disableDecimal(){
+        decimalButton.isEnabled = false
     }
 
 }

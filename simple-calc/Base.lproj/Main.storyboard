@@ -199,6 +199,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iYi-Io-bmU">
+                                <rect key="frame" x="24" y="110" width="329" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="ResultTextField"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqq-LI-pbE">
                                 <rect key="frame" x="117" y="490" width="85" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -208,14 +216,6 @@
                                     <action selector="ButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4vW-mN-g0s"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iYi-Io-bmU">
-                                <rect key="frame" x="24" y="110" width="329" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" identifier="ResultTextField"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -224,6 +224,7 @@
                         <outlet property="UserInputeTextField" destination="nrf-7K-RU3" id="n6t-Gp-Bfo"/>
                         <outlet property="averagebutton" destination="7TJ-3o-MR0" id="kMx-Gf-Mdd"/>
                         <outlet property="countbutton" destination="dsF-RV-wY4" id="Yys-Sx-DHl"/>
+                        <outlet property="decimalButton" destination="dqq-LI-pbE" id="MWb-Va-cUV"/>
                         <outlet property="divbutton" destination="G2w-d0-Pvj" id="48V-Vy-e5d"/>
                         <outlet property="factbutton" destination="mkM-88-C97" id="VtS-S9-QVJ"/>
                         <outlet property="multbutton" destination="jxv-aZ-lBL" id="7qR-al-VMj"/>
