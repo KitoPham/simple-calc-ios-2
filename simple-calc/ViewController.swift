@@ -53,11 +53,13 @@ class ViewController: UIViewController {
                 countCount = 1
                 averageTotal = 0
                 userInput = String(currentValue)
+                enableButtons()
             case "C":
                 currentOperation = nil
                 avgCount = 1
                 countCount = 1
                 userInput = ""
+                ResultTextField.text = ""
             case  "fact":
                 userInput = userInput + " " + buttonText + " "
             case "+", "-", "/", "*", "average", "count":
