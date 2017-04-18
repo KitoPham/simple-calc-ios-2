@@ -29,6 +29,7 @@ class ViewController: UIViewController {
         case count = "count"
         case average = "average"
         case fact = "fact"
+        case mod = "%"
     }
 
     
@@ -66,7 +67,7 @@ class ViewController: UIViewController {
                 enableDecimal();
             case  "fact":
                 userInput = userInput + " " + buttonText + " "
-            case "+", "-", "/", "*", "average", "count":
+            case "+", "-", "/", "*", "average", "count", "%":
                 userInput = userInput + " " + buttonText + " "
                 enableDecimal();
                 disableButtons()
@@ -106,6 +107,8 @@ class ViewController: UIViewController {
                     case "fact":
                         currentOperation = Operator.fact
                         factOperation()
+                    case "%":
+                        currentOperation = Operator.mod
                     case "":
                         if averageStarted {
                             averageStarted = false
@@ -144,6 +147,8 @@ class ViewController: UIViewController {
                             averageStarted = true
                             averageTotal += Double(currentComponent)!
                             avgCount += 1.0
+                        case Operator.mod:
+                            currentValue = Double(Int(currentValue) % Int(currentComponent)!)
                         case Operator.fact:
                             break;
                     }
