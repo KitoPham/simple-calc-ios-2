@@ -89,13 +89,13 @@
                   symbolName = "simple_calc.ViewController.Operator.init (rawValue : Swift.String) -&gt; Swift.Optional&lt;simple_calc.ViewController.Operator&gt;"
                   moduleName = "simple-calc"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/studentuser/Desktop/simple-calc/simple-calc/ViewController.swift"
-                  timestampString = "514242682.050554"
+                  urlString = "file:///Users/studentuser/Desktop/simple-calc-ios/simple-calc/ViewController.swift"
+                  timestampString = "514863435.377272"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "25"
                   endingLineNumber = "25"
-                  offsetFromSymbolStart = "44">
+                  offsetFromSymbolStart = "52">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -104,13 +104,13 @@
                   symbolName = "simple_calc.ViewController.Operator.rawValue.getter : Swift.String"
                   moduleName = "simple-calc"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/studentuser/Desktop/simple-calc/simple-calc/ViewController.swift"
-                  timestampString = "514242682.051886"
+                  urlString = "file:///Users/studentuser/Desktop/simple-calc-ios/simple-calc/ViewController.swift"
+                  timestampString = "514863435.379808"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "25"
                   endingLineNumber = "25"
-                  offsetFromSymbolStart = "88">
+                  offsetFromSymbolStart = "69">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -255,6 +255,22 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "151"
             endingLineNumber = "151"
+            landmarkName = "equalsCalculate(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "simple-calc/ViewController.swift"
+            timestampString = "514863455.555077"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "equalsCalculate(_:)"
             landmarkType = "7">
          </BreakpointContent>

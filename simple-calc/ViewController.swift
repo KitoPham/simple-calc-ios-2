@@ -19,6 +19,8 @@ class ViewController: UIViewController {
     var averageTotal = 0.0
     var averageStarted = false;
     
+
+    @IBOutlet weak var ScrollView: UIScrollView!
     @IBOutlet weak var UserInputeTextField: UITextField!
     @IBOutlet weak var ResultTextField: UITextField!
     enum Operator : String{
