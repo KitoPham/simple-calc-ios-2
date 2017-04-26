@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4997A1951EB04AD00067E476 /* HistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4997A1941EB04AD00067E476 /* HistViewController.swift */; };
 		49B86E921EA0676200BB2647 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B86E911EA0676200BB2647 /* AppDelegate.swift */; };
 		49B86E941EA0676200BB2647 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B86E931EA0676200BB2647 /* ViewController.swift */; };
 		49B86E971EA0676200BB2647 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49B86E951EA0676200BB2647 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4997A1941EB04AD00067E476 /* HistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistViewController.swift; sourceTree = "<group>"; };
 		49B86E8E1EA0676200BB2647 /* simple-calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "simple-calc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49B86E911EA0676200BB2647 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49B86E931EA0676200BB2647 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				49B86E931EA0676200BB2647 /* ViewController.swift */,
 				49B86E951EA0676200BB2647 /* Main.storyboard */,
 				49B86E981EA0676200BB2647 /* Assets.xcassets */,
+				4997A1941EB04AD00067E476 /* HistViewController.swift */,
 				49B86E9A1EA0676200BB2647 /* LaunchScreen.storyboard */,
 				49B86E9D1EA0676200BB2647 /* Info.plist */,
 			);
@@ -267,6 +270,7 @@
 			files = (
 				49B86E941EA0676200BB2647 /* ViewController.swift in Sources */,
 				49B86E921EA0676200BB2647 /* AppDelegate.swift in Sources */,
+				4997A1951EB04AD00067E476 /* HistViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,6 +19,8 @@ class ViewController: UIViewController {
     var averageTotal = 0.0
     var averageStarted = false;
     
+    var history : [String] = [""]
+    
 
     @IBOutlet weak var ScrollView: UIScrollView!
     @IBOutlet weak var UserInputeTextField: UITextField!
@@ -35,8 +37,10 @@ class ViewController: UIViewController {
     }
 
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        disableButtons()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -77,6 +81,7 @@ class ViewController: UIViewController {
                 userInput += buttonText
                 enableButtons()
         }
+
         UserInputeTextField.text = userInput
         
     }
@@ -164,7 +169,10 @@ class ViewController: UIViewController {
             currentValue = averageTotal / avgCount
         }
         
+        
+        history.append(String(userInput) + " = " + String(currentValue))
         ResultTextField.text = String(currentValue)
+        
     }
     
     @IBOutlet weak var averagebutton: UIButton!
@@ -209,6 +217,12 @@ class ViewController: UIViewController {
     }
     func disableDecimal(){
         decimalButton.isEnabled = false
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let historyView = segue.destination as! HistViewController
+        historyView.history = self.history
+        
     }
 
 }
